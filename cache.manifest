@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# rev 4
+NETWORK:
+www.google-analytics.com/analytics.js
+www.google-analytics.com/collect
+CACHE:
+style/bootstrap/css/bootstrap.min.css
+style/bootstrap/img/glyphicons-halflings.png
+style/bootstrap/img/glyphicons-halflings-white.png
+style/main.css
+style/sprites.png
+script/jquery-2.0.1.min.js
+script/id3.js

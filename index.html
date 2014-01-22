@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" manifest="/cache.manifest">
+<head>
+    <meta charset="utf-8" />
+    <title>MP3 Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+    <header>
+        <h1>Media Libary</h1>
+        <div class="input-append">
+            <input id="filter" class="search-query" type="text" placeholder="Type to filter" />
+            <button id="clear" class="btn">Clear</button>
+        </div>
+        <input id="file" type="file" multiple="" accept="audio/*" />
+        <!--- TODO: add WebKit directory support:  webkitdirectory="" mozdirectory="" directory=""  -->
+    </header>
+    <section id="main-section">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td class="span1"></td>
+                    <td class="span4">Title</td>
+                    <td class="span4">Album</td>
+                    <td class="span1">Duration</td>
+                    <td class="span2">Artist</td>
+                    <td class="span1">Genre</td>
+                </tr>
+            </thead>
+            <tbody id="playlist">
+                <tr id="nullTr" class="hide"></tr>
+            </tbody>
+        </table>
+        <div id="guide" class="text-center">
+            <h3>Here is empty now</h3>
+            <button id="import" class="btn">Import</button>
+        </div>
+    </section>
+    <footer>
+        <div id="progress-wrapper">
+            <div class="slider-background"></div>
+            <div class="slider-foreground"></div>
+            <div class="slider-thumb"></div>
+        </div>
+        <div id="buttons-wrapper" class="text-center">
+            <div id="control-time">0:00</div>
+            <div id="control-loop" class="control"></div>
+            <div id="control-previous" class="control disabled"></div>
+            <div id="control-play" class="control disabled"></div>
+            <div id="control-next" class="control disabled"></div>
+            <div id="control-shuffle" class="control"></div>
+            <div id="control-volume" class="control text-left">
+                <div id="volume-icon" class="control"></div>
+                <div id="volume-slider">
+                    <div class="slider-background"></div>
+                    <div class="slider-foreground"></div>
+                    <div class="slider-thumb"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <table id="contextmenu" class="table table-hover table-bordered">
+        <tr class="menuitem">
+            <td>Play</td>
+        </tr>
+        <tr class="menuitem">
+            <td>Delete</td>
+        </tr>
+        <tr class="menuitem">
+            <td>Detail</td>
+        </tr>
+    </table>
+    <script src="script/jquery-2.0.1.min.js"></script>
+    <script src="script/id3.js"></script>
+    <script src="script/main.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-40855806-1', 'cnsimonchan.github.io');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
