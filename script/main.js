@@ -293,8 +293,8 @@ var player = $("<audio />").on("playing", function () {
 }).on("timeupdate", function () {
     if (!dragging)
         progress.val(player.prop("currentTime") / player.prop("duration"));
-}), mp3 = player[0].canPlayType("audio/mpeg") == "maybe",
-ogg = player[0].canPlayType("audio/ogg") == "maybe",
+}), mp3 = player[0].canPlayType("audio/mpeg") != "",
+ogg = player[0].canPlayType("audio/ogg") != "",
 fileSelector = $("#file").change(function () {
     loadFiles(this.files, nullTr);
 });
